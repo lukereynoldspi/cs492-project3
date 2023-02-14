@@ -13,13 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 3,
         child: SafeArea(
           top: true,
           child: Scaffold(
             appBar: AppBar(
-              backgroundColor: Color.fromRGBO(86, 112, 127, 1),
+              backgroundColor: const Color.fromRGBO(86, 112, 127, 1),
               bottom: const TabBar(
                 tabs: [
                   Tab(icon: Icon(Icons.face)),

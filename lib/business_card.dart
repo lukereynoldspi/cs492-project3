@@ -5,6 +5,30 @@ class BusinessCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Placeholder()));
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: Padding(
+            padding: const EdgeInsets.all(50),
+            child: SizedBox(
+              height: 50,
+              width: 50,
+              child: Placeholder(
+                child: Column(
+                  children: const [
+                    Text("Hello"),
+                    Text("Hello"),
+                    Text("Hello"),
+                    Text("Hello"),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -5,6 +5,6 @@ class Resume extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Placeholder()));
+    return const Scaffold(body: Center(child: Placeholder()));
   }
 }
