@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'business_card.dart';
+import 'question.dart';
+import 'resume.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //color: Color.fromARGB(86, 112, 127, 255),
       home: DefaultTabController(
         length: 3,
         child: SafeArea(
+          top: true,
           child: Scaffold(
             appBar: AppBar(
+              backgroundColor: Color.fromRGBO(86, 112, 127, 1),
               bottom: const TabBar(
                 tabs: [
                   Tab(icon: Icon(Icons.face)),
@@ -23,13 +27,16 @@ class MyApp extends StatelessWidget {
                   Tab(icon: Icon(Icons.help_outline)),
                 ],
               ),
-              title: const Text('Call Me Maybe'),
+              title: const Text(
+                'Call Me Maybe',
+                textAlign: TextAlign.center,
+              ),
             ),
             body: const TabBarView(
               children: [
-                Text('Business Card'),
-                Text('Resume'),
-                Text('Questions'),
+                BusinessCard(),
+                Resume(),
+                Question(),
               ],
             ),
           ),
